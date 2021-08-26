@@ -9,7 +9,7 @@ Classfile /G:/collectTest/src/com/company/jvm/test/TestClass1.class
   Last modified 2021-8-20; size 231 bytes
   MD5 checksum 511bde124699ed3abbe347f9d028fba4
   Compiled from "TestClass1.java"
-public class com.company.jvm.test.TestClass1
+public class com.company.jvm.test1.TestClass1
   //次版本号
   minor version: 0
   //主版本号
@@ -40,7 +40,7 @@ Constant pool:
   #13 = Utf8               com/company/jvm/test/TestClass1
   #14 = Utf8               java/lang/Object
 {
-  public com.company.jvm.test.TestClass1();
+  public com.company.jvm.test1.TestClass1();
     descriptor: ()V
     flags: ACC_PUBLIC
     //方法体内的代码，经过Javac编译，变为字节码指令存储在Code属性内
