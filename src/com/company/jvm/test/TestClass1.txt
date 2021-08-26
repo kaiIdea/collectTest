@@ -1,0 +1,48 @@
+Classfile /G:/collectTest/src/com/company/jvm/test/TestClass1.class
+  Last modified 2021-8-20; size 231 bytes
+  MD5 checksum 511bde124699ed3abbe347f9d028fba4
+  Compiled from "TestClass1.java"
+public class com.company.jvm.test.TestClass1
+  //次版本号
+  minor version: 0
+  //主版本号
+  major version: 52
+  //类访问标识，是否公用，是否有超类
+  flags: ACC_PUBLIC, ACC_SUPER
+//常量吃
+Constant pool:
+   // #1方法引用，索引#3.#12
+   #1 = Methodref          #3.#12         // java/lang/Object."<init>":()V
+   //TestClass1的符号引用
+   #2 = Class              #13            // com/company/jvm/test/TestClass1
+   //Object的符号引用
+   #3 = Class              #14            // java/lang/Object
+   //变量i的字面量
+   #4 = Utf8               i
+   #5 = Utf8               I
+   //Object类的初始化方法
+   #6 = Utf8               <init>
+   //初始化方法返回类型
+   #7 = Utf8               ()V
+   //
+   #8 = Utf8               Code
+   #9 = Utf8               LineNumberTable
+  #10 = Utf8               SourceFile
+  #11 = Utf8               TestClass1.java
+  #12 = NameAndType        #6:#7          // "<init>":()V
+  #13 = Utf8               com/company/jvm/test/TestClass1
+  #14 = Utf8               java/lang/Object
+{
+  public com.company.jvm.test.TestClass1();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 8: 0
+}
+//源文件名称
+SourceFile: "TestClass1.java"

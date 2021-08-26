@@ -26,8 +26,14 @@ public class Main {
 
         String aa = stringBuffer.toString();
         char[] chars = aa.toCharArray();
-
         StringBuffer str1 = new StringBuffer();
+        if(chars.length < 16){
+            int len = 16-chars.length;
+            for(int i = 0;i<len;i++){
+                str1.append(0);
+            }
+        }
+
         for(int i = chars.length-1;i>=0;--i){
             str1.append(chars[i]);
         }
@@ -36,7 +42,18 @@ public class Main {
 
     public static void main(String[] args) {
         //Map<String,Object> map = new HashMap<>();
-        String aa = twoBinary(1569);
+        //String aa = twoBinary(1569);
+
+        int hash = 1569,n=16;
+        int i = (n-1) & hash;
+
+        String a1 = twoBinary(15);
+
+        String a2 = twoBinary(1569);
+
+
+        String b1 = Integer.toBinaryString(15);
+        String b2 = Integer.toBinaryString(1632);
         System.out.println();
 
         // 11000100001
