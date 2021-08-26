@@ -1,3 +1,10 @@
+public class TestClass1 {
+
+    private int i;
+}
+******以上为源码
+
+
 Classfile /G:/collectTest/src/com/company/jvm/test/TestClass1.class
   Last modified 2021-8-20; size 231 bytes
   MD5 checksum 511bde124699ed3abbe347f9d028fba4
@@ -7,7 +14,7 @@ public class com.company.jvm.test.TestClass1
   minor version: 0
   //主版本号
   major version: 52
-  //类访问标识，是否公用，是否有超类
+  //类访问标识，是否公用类型，是否允许使用invokespecial字节码指令的新语义，JDK1.0.2版本之后编译的类，这个标志一直为真。
   flags: ACC_PUBLIC, ACC_SUPER
 //常量吃
 Constant pool:
@@ -36,12 +43,21 @@ Constant pool:
   public com.company.jvm.test.TestClass1();
     descriptor: ()V
     flags: ACC_PUBLIC
+    //方法体内的代码，经过Javac编译，变为字节码指令存储在Code属性内
     Code:
+      //stack/max_stack 操作栈的值
+      //locals 局部变量表所需的存储空间，单位是(slot-变量槽)，是虚拟机为局部变量分配内存的最小单位，不超过32为的基本数据类型，每个局部变量占用1个槽，long and double（64位） 占用2个。
+      //args_size 实例方法参数值，默认1，是因为任何实例方法里面，可以通过this关键字访问到方法对象。Javac编译器的时候，对this关键字的访问转变为对1个普通方法参数的访问，在调用实例的方法时自动传入此参数。
+      //          局部变量预留第0个变量槽，存储对象实例的引用，所以参数值从1开始。
       stack=1, locals=1, args_size=1
+         //加载1个引用类型到操作栈，栈顶
          0: aload_0
+         //执行引用初始化构造方法
          1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         //方法返回，void类型。
          4: return
       LineNumberTable:
+        //冒号前时字节码的行号，冒号后是Java源码行号
         line 8: 0
 }
 //源文件名称
