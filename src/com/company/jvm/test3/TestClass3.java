@@ -10,6 +10,4 @@ public class TestClass3 {
     private String text = "Hello";
     private String text1 = "World";
     private String text2 = text+text1;
-
-
 }
