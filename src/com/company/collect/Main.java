@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Main {
 
-    private static StringBuffer stringBuffer = new StringBuffer();
+    private static final StringBuffer stringBuffer = new StringBuffer();
 
 
     static String twoBinary(int math){
@@ -54,8 +54,6 @@ public class Main {
 
         String b1 = Integer.toBinaryString(15);
         String b2 = Integer.toBinaryString(1632);
-        System.out.println();
-
         // 11000100001
     }
 }
