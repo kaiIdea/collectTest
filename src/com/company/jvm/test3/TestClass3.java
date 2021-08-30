@@ -7,7 +7,17 @@ package com.company.jvm.test3;
  */
 public class TestClass3 {
 
+    private String text2 = new String("Hello");
     private String text = "Hello";
     private String text1 = "World";
-    private String text2 = text+text1;
+
+
+    public void test(){
+        System.out.println(text2 == text);
+    }
+
+    public static void main(String[] args) {
+        new TestClass3().test();
+    }
+
 }
