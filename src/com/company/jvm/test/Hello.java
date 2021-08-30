@@ -1,4 +1,4 @@
-package com.company.jvm;
+package com.company.jvm.test;
 
 /**
  * @Auther: GEEX1428

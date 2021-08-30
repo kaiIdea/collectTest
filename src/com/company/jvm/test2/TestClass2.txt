@@ -1,0 +1,296 @@
+public class TestClass2 {
+
+    public int i;
+
+    public int j;
+}
+******以上为源码
+
+
+Classfile /G:/collectTest/src/com/company/jvm/test2/TestClass2.class
+  Last modified 2021-8-26; size 282 bytes
+  MD5 checksum 89cc1c515e76cb0c91fe06628410898e
+  Compiled from "TestClass2.java"
+public class com.company.jvm.test2.TestClass2
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#15         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#16         // com/company/jvm/test2/TestClass2.i:I
+   #3 = Fieldref           #4.#17         // com/company/jvm/test2/TestClass2.j:I
+   #4 = Class              #18            // com/company/jvm/test2/TestClass2
+   #5 = Class              #19            // java/lang/Object
+   #6 = Utf8               i
+   #7 = Utf8               I
+   #8 = Utf8               j
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               SourceFile
+  #14 = Utf8               TestClass2.java
+  #15 = NameAndType        #9:#10         // "<init>":()V
+  #16 = NameAndType        #6:#7          // i:I
+  #17 = NameAndType        #8:#7          // j:I
+  #18 = Utf8               com/company/jvm/test2/TestClass2
+  #19 = Utf8               java/lang/Object
+{
+  public com.company.jvm.test2.TestClass2();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         //将第0个本地变量槽中的引用类型数据加载到操作数栈栈顶(this引用入栈)
+         0: aload_0
+         //执行该引用，初始化方法
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         //将第0个本地变量槽中的引用类型数据加载到操作数栈栈顶
+         4: aload_0
+         //将变量0入栈
+         5: iconst_0
+         //给实例对象的字段i赋值
+         6: putfield      #2                  // Field i:I
+         //将第0个本地变量槽中的引用类型数据加载到操作数栈栈顶
+         9: aload_0
+        10: iconst_0
+        //给实例对象的字段j赋值
+        11: putfield      #3                  // Field j:I
+        //推至栈顶返回
+        14: return
+      LineNumberTable:
+        line 8: 0
+        line 10: 4
+        line 12: 9
+}
+SourceFile: "TestClass2.java"
+
+
+------------------------------------------------------------------------------------------------------------------------
+public class TestClass2 {
+
+    public int i;
+
+    public int j;
+
+    public static void main(String[] args) {
+        int i = new TestClass2().i;
+    }
+}
+******以上为源码
+
+
+Classfile /G:/collectTest/src/com/company/jvm/test2/TestClass2.class
+  Last modified 2021-8-27; size 345 bytes
+  MD5 checksum f58d9749169646e5553cc5fa779f7aed
+  Compiled from "TestClass2.java"
+public class com.company.jvm.test2.TestClass2
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#17         // java/lang/Object."<init>":()V
+   #2 = Class              #18            // com/company/jvm/test2/TestClass2
+   #3 = Methodref          #2.#17         // com/company/jvm/test2/TestClass2."<init>":()V
+   #4 = Fieldref           #2.#19         // com/company/jvm/test2/TestClass2.i:I
+   #5 = Class              #20            // java/lang/Object
+   #6 = Utf8               i
+   #7 = Utf8               I
+   #8 = Utf8               j
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               main
+  #14 = Utf8               ([Ljava/lang/String;)V
+  #15 = Utf8               SourceFile
+  #16 = Utf8               TestClass2.java
+  #17 = NameAndType        #9:#10         // "<init>":()V
+  #18 = Utf8               com/company/jvm/test2/TestClass2
+  #19 = NameAndType        #6:#7          // i:I
+  #20 = Utf8               java/lang/Object
+{
+  public int i;
+    descriptor: I
+    flags: ACC_PUBLIC
+
+  public int j;
+    descriptor: I
+    flags: ACC_PUBLIC
+
+  public com.company.jvm.test2.TestClass2();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 8: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         //实例化索引值为2的对象
+         0: new           #2                  // class com/company/jvm/test2/TestClass2
+         //复制栈顶元素
+         3: dup
+         //执行初始化方法
+         4: invokespecial #3                  // Method "<init>":()V
+         //获取实例化对象字段值
+         7: getfield      #4                  // Field i:I
+         //将字段值，加载到局部变量第1个槽
+        10: istore_1
+        //方法返回
+        11: return
+      LineNumberTable:
+        line 15: 0
+        line 16: 11
+}
+SourceFile: "TestClass2.java"
+
+
+------------------------------------------------------------------------------------------------------------------------
+public class TestClass2 {
+
+
+    public int add(){
+        int i = 10;
+        int j = 128;
+        return i+j;
+    }
+}
+******以上为源码
+
+Classfile /G:/collectTest/src/com/company/jvm/test2/TestClass2.class
+  Last modified 2021-8-27; size 285 bytes
+  MD5 checksum bac4358f6ac8e13755d3744ebfb10736
+  Compiled from "TestClass2.java"
+public class com.company.jvm.test2.TestClass2
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#12         // java/lang/Object."<init>":()V
+   #2 = Class              #13            // com/company/jvm/test2/TestClass2
+   #3 = Class              #14            // java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               add
+   #9 = Utf8               ()I
+  #10 = Utf8               SourceFile
+  #11 = Utf8               TestClass2.java
+  #12 = NameAndType        #4:#5          // "<init>":()V
+  #13 = Utf8               com/company/jvm/test2/TestClass2
+  #14 = Utf8               java/lang/Object
+{
+  public com.company.jvm.test2.TestClass2();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 8: 0
+
+  public int add();
+    descriptor: ()I
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         //将整型常量10，推送至操作数栈顶
+         0: bipush        10
+         //将该值存储至局部变量1槽
+         2: istore_1
+         //将整型常量128，推送至操作数栈顶
+         3: sipush        128
+         //将该值存储至局部变量2槽
+         6: istore_2
+         //加载局部变量1槽数据入栈
+         7: iload_1
+          //加载局部变量2槽数据入栈
+         8: iload_2
+         //将操作数栈中，头两个栈顶元素出栈，做整型加法
+         9: iadd
+         //返回指向结果
+        10: ireturn
+      LineNumberTable:
+        line 10: 0
+        line 11: 3
+        line 12: 7
+}
+SourceFile: "TestClass2.java"
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+public class TestClass2 {
+
+    private String text = "127";
+
+    private String text1 = "dev";
+}
+******以上为源码
+
+Classfile /G:/collectTest/src/com/company/jvm/test2/TestClass2.class
+  Last modified 2021-8-27; size 326 bytes
+  MD5 checksum 8e26a92e90ea9730414fd12bfecd0502
+  Compiled from "TestClass2.java"
+public class com.company.jvm.test2.TestClass2
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#17         // java/lang/Object."<init>":()V
+   #2 = String             #18            // 127
+   #3 = Fieldref           #6.#19         // com/company/jvm/test2/TestClass2.text:Ljava/lang/String;
+   #4 = String             #20            // dev
+   #5 = Fieldref           #6.#21         // com/company/jvm/test2/TestClass2.text1:Ljava/lang/String;
+   #6 = Class              #22            // com/company/jvm/test2/TestClass2
+   #7 = Class              #23            // java/lang/Object
+   #8 = Utf8               text
+   #9 = Utf8               Ljava/lang/String;
+  #10 = Utf8               text1
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               SourceFile
+  #16 = Utf8               TestClass2.java
+  #17 = NameAndType        #11:#12        // "<init>":()V
+  #18 = Utf8               127
+  #19 = NameAndType        #8:#9          // text:Ljava/lang/String;
+  #20 = Utf8               dev
+  #21 = NameAndType        #10:#9         // text1:Ljava/lang/String;
+  #22 = Utf8               com/company/jvm/test2/TestClass2
+  #23 = Utf8               java/lang/Object
+{
+  public com.company.jvm.test2.TestClass2();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: ldc           #2                  // String 127
+         7: putfield      #3                  // Field text:Ljava/lang/String;
+        10: aload_0
+        11: ldc           #4                  // String dev
+        13: putfield      #5                  // Field text1:Ljava/lang/String;
+        16: return
+      LineNumberTable:
+        line 8: 0
+        line 11: 4
+        line 13: 10
+}
+SourceFile: "TestClass2.java"
+
+
