@@ -24,7 +24,8 @@ public class TestClass3 {
     }
 
     public static void main(String[] args) {
-        new TestClass3().test();
+        TestClass3 class3 = new TestClass3();
+        System.gc();
     }
 
 }
